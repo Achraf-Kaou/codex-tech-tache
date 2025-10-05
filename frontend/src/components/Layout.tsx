@@ -78,7 +78,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     <Box className="h-full bg-sidebar">
       <Box className="p-4">
         <Typography variant="h6" className="font-bold text-sidebar-foreground">
-          TaskFlow
+          tech tache
         </Typography>
       </Box>
       <Divider className="bg-sidebar-border" />
@@ -109,7 +109,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     <Box className="flex h-screen">
       <AppBar
         position="fixed"
-        className="bg-card border-b border-border"
+        className="bg-primary border-b border-border shadow-sm"
         elevation={0}
         sx={{
           width: { sm: `calc(100% - ${drawerWidth}px)` },
@@ -123,19 +123,19 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             edge="start"
             onClick={handleDrawerToggle}
             sx={{ mr: 2, display: { sm: 'none' } }}
-            className="text-foreground"
+            className="text-primary-foreground"
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1 }} className="text-foreground">
+          <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1 }} className="text-primary-foreground font-semibold">
             {menuItems.find((item) => item.path === location.pathname)?.text || 'Dashboard'}
           </Typography>
           <Box className="flex items-center gap-2">
-            <Typography variant="body2" className="text-foreground hidden sm:block">
+            <Typography variant="body2" className="text-primary-foreground hidden sm:block">
               {user?.name || user?.email}
             </Typography>
             <IconButton onClick={handleProfileMenuOpen} size="small">
-              <Avatar className="bg-primary text-primary-foreground">
+              <Avatar className="bg-primary-foreground text-primary">
                 {user?.name?.[0] || user?.email[0]}
               </Avatar>
             </IconButton>

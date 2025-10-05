@@ -100,7 +100,7 @@ const Auth: React.FC = () => {
         <CardContent className="p-6">
           <Box className="text-center mb-6">
             <Typography variant="h4" className="font-bold text-foreground mb-2">
-              TaskFlow
+              tech tache
             </Typography>
             <Typography variant="body2" className="text-muted-foreground">
               Manage your projects and tasks efficiently
